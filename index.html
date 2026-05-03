@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>JM Cielo Americano | Instalación de cielo americano en Santiago</title>
+
+  <!-- Descripción para buscadores -->
+  <meta name="description" content="Instalación profesional de cielo americano en Santiago de Chile. Venta e instalación de planchas, perfilería, mantención y reparación. Cotiza por WhatsApp." />
+
+  <style>
+    /* =========================
+       ESTILOS GENERALES
+       ========================= */
+
+    :root {
+      --color-principal: #f5a623;
+      --color-oscuro: #111827;
+      --color-texto: #374151;
+      --color-claro: #f9fafb;
+      --color-blanco: #ffffff;
+      --color-borde: #e5e7eb;
+      --sombra-suave: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--color-texto);
+      background: var(--color-blanco);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--color-oscuro);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      max-width: 720px;
+      color: #6b7280;
+      font-size: 1.05rem;
+      margin-bottom: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--color-principal);
+      color: #111827;
+      box-shadow: 0 12px 24px rgba(245, 166, 35, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(0.95);
+    }
+
+    .btn-dark {
+      background: var(--color-oscuro);
+      color: var(--color-blanco);
+    }
+
+    .btn-dark:hover {
+      transform: translateY(-2px);
+      background: #000;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-borde);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo strong {
+      color: var(--color-oscuro);
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--color-principal);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .menu a:hover {
+      color: var(--color-oscuro);
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+      position: relative;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      color: var(--color-blanco);
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(17, 24, 39, 0.92), rgba(17, 24, 39, 0.55), rgba(17, 24, 39, 0.25)),
+        url("assets/img/hero-cielo-americano.jpg") center/cover no-repeat;
+    }
+
+    /*
+      Nota:
+      Si aún no tienes imagen, crea esta carpeta:
+      assets/img/
+      y coloca una foto llamada:
+      hero-cielo-americano.jpg
+
+      Mientras no exista esa foto, el navegador no mostrará la imagen de fondo,
+      pero el diseño seguirá funcionando.
+    */
+
+    .hero-content {
+      max-width: 720px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fef3c7;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: 1.18rem;
+      color: #e5e7eb;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .hero-info-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 14px 18px;
+      border-radius: 16px;
+      min-width: 150px;
+    }
+
+    .hero-info-card strong {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--color-blanco);
+    }
+
+    .hero-info-card span {
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    /* =========================
+       SERVICIOS
+       ========================= */
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--color-blanco);
+      border: 1px solid var(--color-borde);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--sombra-suave);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: #fff7ed;
+      color: #b45309;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--color-oscuro);
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #6b7280;
+    }
+
+    /* =========================
+       BLOQUE DESTACADO
+       ========================= */
+
+    .highlight {
+      background: var(--color-claro);
+    }
+
+    .highlight-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+      margin-bottom: 30px;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #4b5563;
+      font-weight: 600;
+    }
+
+    .check-item span {
+      width: 26px;
+      height: 26px;
+      flex: 0 0 26px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--color-principal);
+      color: #111827;
+      font-weight: 900;
+    }
+
+    .image-frame {
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 420px;
+      background:
+        linear-gradient(rgba(17, 24, 39, 0.15), rgba(17, 24, 39, 0.15)),
+        url("assets/img/trabajo-cielo-1.jpg") center/cover no-repeat;
+      box-shadow: var(--sombra-suave);
+    }
+
+    /* =========================
+       PRODUCTOS / MATERIALES
+       ========================= */
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .material-card {
+      border: 1px solid var(--color-borde);
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--color-blanco);
+      box-shadow: var(--sombra-suave);
+    }
+
+    .material-img {
+      height: 160px;
+      background: #e5e7eb center/cover no-repeat;
+    }
+
+    .material-img.img-1 { background-image: url("assets/img/material-planchas.jpg"); }
+    .material-img.img-2 { background-image: url("assets/img/material-perfiles.jpg"); }
+    .material-img.img-3 { background-image: url("assets/img/material-luminarias.jpg"); }
+    .material-img.img-4 { background-image: url("assets/img/material-accesorios.jpg"); }
+
+    .material-body {
+      padding: 18px;
+    }
+
+    .material-body h3 {
+      color: var(--color-oscuro);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .material-body p {
+      color: #6b7280;
+      font-size: 0.94rem;
+      margin-bottom: 14px;
+    }
+
+    .material-body a {
+      color: #b45309;
+      font-weight: 800;
+      font-size: 0.94rem;
+    }
+
+
+    /* =========================
+       MODAL CATÁLOGO DE MATERIALES
+       ========================= */
+
+    .catalog-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(8px);
+    }
+
+    .catalog-modal.active {
+      display: flex;
+    }
+
+    .catalog-panel {
+      width: min(1080px, 96vw);
+      max-height: 90vh;
+      overflow-y: auto;
+      background: var(--color-blanco);
+      border-radius: 28px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      position: relative;
+    }
+
+    .catalog-header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 26px;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--color-borde);
+      backdrop-filter: blur(10px);
+    }
+
+    .catalog-header h3 {
+      color: var(--color-oscuro);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.1;
+    }
+
+    .catalog-header p {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .catalog-close {
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 50%;
+      background: var(--color-oscuro);
+      color: var(--color-blanco);
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: 0.25s ease;
+      flex: 0 0 42px;
+    }
+
+    .catalog-close:hover {
+      transform: rotate(90deg);
+      background: #000;
+    }
+
+    .catalog-body {
+      padding: 26px;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .catalog-product {
+      border: 1px solid var(--color-borde);
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--color-blanco);
+      box-shadow: var(--sombra-suave);
+    }
+
+    .catalog-product-img {
+      height: 190px;
+      background: #e5e7eb center/cover no-repeat;
+    }
+
+    .catalog-product-body {
+      padding: 18px;
+    }
+
+    .catalog-product-body h4 {
+      color: var(--color-oscuro);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .catalog-product-body p {
+      color: #6b7280;
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+
+    .catalog-price {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #fff7ed;
+      color: #b45309;
+      font-weight: 900;
+      margin-bottom: 14px;
+      font-size: 0.92rem;
+    }
+
+    .catalog-product-body .btn {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+    }
+
+    .material-card {
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .material-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245, 166, 35, 0.65);
+    }
+
+    @media (max-width: 900px) {
+      .catalog-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .catalog-modal {
+        padding: 12px;
+      }
+
+      .catalog-panel {
+        max-height: 92vh;
+        border-radius: 22px;
+      }
+
+      .catalog-header {
+        padding: 18px;
+      }
+
+      .catalog-body {
+        padding: 18px;
+      }
+
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-product-img {
+        height: 210px;
+      }
+    }
+
+
+    /* =========================
+       GALERÍA
+       ========================= */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      grid-auto-rows: 230px;
+      gap: 18px;
+    }
+
+    .gallery-item {
+      border-radius: 24px;
+      background: #d1d5db center/cover no-repeat;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--sombra-suave);
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.45), transparent);
+    }
+
+    .gallery-item span {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      z-index: 1;
+      color: var(--color-blanco);
+      font-weight: 800;
+    }
+
+    .gallery-item.big {
+      grid-row: span 2;
+    }
+
+    .gallery-1 { background-image: url("assets/img/galeria-1.jpg"); }
+    .gallery-2 { background-image: url("assets/img/galeria-2.jpg"); }
+    .gallery-3 { background-image: url("assets/img/galeria-3.jpg"); }
+    .gallery-4 { background-image: url("assets/img/galeria-4.jpg"); }
+
+
+    /* =========================
+       BOTONES SOCIALES Y FORMULARIO
+       ========================= */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 36px;
+      text-align: left;
+    }
+
+    .contact-box,
+    .contact-form {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+    }
+
+    .contact-box h3,
+    .contact-form h3 {
+      color: var(--color-blanco);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p,
+    .contact-form p {
+      color: #d1d5db;
+      margin-bottom: 20px;
+    }
+
+    .social-buttons {
+      display: grid;
+      gap: 12px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--color-blanco);
+      font-weight: 800;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: 0.25s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: #f9fafb;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 14px;
+      padding: 13px 14px;
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--color-oscuro);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.98rem;
+      outline: none;
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-note {
+      color: #9ca3af;
+      font-size: 0.86rem;
+      margin-top: 12px;
+    }
+
+
+    /* =========================
+       TOP BAR PREMIUM
+       ========================= */
+
+    .topbar {
+      background: #050505;
+      color: var(--color-blanco);
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar-inner {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .topbar-left,
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #f3f4f6;
+      font-weight: 600;
+    }
+
+    .topbar-item strong {
+      color: var(--color-principal);
+      font-weight: 900;
+    }
+
+    .topbar-social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--color-blanco);
+      font-size: 0.78rem;
+      font-weight: 900;
+      transition: 0.25s ease;
+    }
+
+    .topbar-social:hover {
+      background: var(--color-principal);
+      color: #111827;
+      transform: translateY(-1px);
+    }
+
+    .header {
+      top: 42px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      flex-direction: row;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo img {
+      height: 58px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+      border-left: 1px solid var(--color-borde);
+      padding-left: 14px;
+    }
+
+    .logo-text strong {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-text span {
+      font-size: 0.72rem;
+    }
+
+    .menu a {
+      position: relative;
+      padding: 28px 0;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      color: #111827;
+    }
+
+    .menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 19px;
+      width: 0;
+      height: 3px;
+      background: var(--color-principal);
+      border-radius: 999px;
+      transition: 0.25s ease;
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    .header .btn-primary {
+      border-radius: 6px;
+      text-transform: uppercase;
+      padding: 15px 20px;
+      font-size: 0.86rem;
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(17, 24, 39, 0.62), rgba(17, 24, 39, 0.18)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+    }
+
+    .image-frame {
+      background:
+        linear-gradient(rgba(17, 24, 39, 0.12), rgba(17, 24, 39, 0.12)),
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+    }
+
+    .material-img.img-1 { background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80"); }
+    .material-img.img-2 { background-image: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"); }
+    .material-img.img-3 { background-image: url("https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=900&q=80"); }
+    .material-img.img-4 { background-image: url("https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80"); }
+
+    .gallery-1 { background-image: url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"); }
+    .gallery-2 { background-image: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"); }
+    .gallery-3 { background-image: url("https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=900&q=80"); }
+    .gallery-4 { background-image: url("https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80"); }
+
+    .contact-mini-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+      color: #d1d5db;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .contact-mini-bar a {
+      color: var(--color-principal);
+    }
+
+
+    /* =========================
+       CTA FINAL
+       ========================= */
+
+    .cta {
+      background: var(--color-oscuro);
+      color: var(--color-blanco);
+      text-align: center;
+    }
+
+    .cta .section-title {
+      color: var(--color-blanco);
+    }
+
+    .cta .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+      color: #d1d5db;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .footer {
+      background: #0b1120;
+      color: #d1d5db;
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .footer strong {
+      color: var(--color-blanco);
+    }
+
+    /* =========================
+       BOTÓN FLOTANTE WHATSAPP
+       ========================= */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 200;
+      background: #25d366;
+      color: white;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.9rem;
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 900px) {
+      .menu {
+        display: none;
+      }
+
+
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .topbar-left,
+      .topbar-right {
+        justify-content: center;
+      }
+
+      .header {
+        top: 0;
+      }
+
+      .logo img {
+        height: 48px;
+      }
+
+      .logo-text {
+        display: none;
+      }
+
+
+      .hero {
+        min-height: auto;
+      }
+
+      .highlight-layout,
+      .cards-grid,
+      .materials-grid,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+      }
+
+      .gallery-item.big {
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .section {
+        padding: 62px 0;
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-info-card {
+        width: 100%;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- =========================
+       BARRA SUPERIOR PREMIUM
+       ========================= -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="topbar-item"><strong>📍</strong> Santiago, Chile</span>
+        <a class="topbar-item" href="https://wa.me/56958305732?text=Hola%20JM%20Cielo%20Americano%2C%20quiero%20cotizar." target="_blank">
+          <strong>☎</strong> +56 9 5830 5732
+        </a>
+        <a class="topbar-item" href="mailto:ventascieloamericanojm@gmail.com">
+          <strong>✉</strong> ventascieloamericanojm@gmail.com
+        </a>
+      </div>
+
+      <div class="topbar-right">
+        <span>Síguenos:</span>
+        <a class="topbar-social" href="https://www.instagram.com/cieloamericanojm" target="_blank" aria-label="Instagram">IG</a>
+        <a class="topbar-social" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">FB</a>
+        <a class="topbar-social" href="mailto:ventascieloamericanojm@gmail.com" aria-label="Correo">✉</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="JM Cielo Americano">
+        <img src="assets/img/logo.JPEG" alt="JM Cielo Americano">
+        <div class="logo-text">
+          <strong>JM Cielo Americano</strong>
+          <span>Instalación profesional</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Menú principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#materiales">Materiales</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn-primary" href="https://wa.me/56958305732?text=Hola%20JM%20Cielo%20Americano%2C%20quiero%20cotizar%20una%20instalaci%C3%B3n." target="_blank">
+        📲 Cotizar por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================
+       HERO PRINCIPAL
+       ========================= -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Santiago de Chile · Cotización por WhatsApp</div>
+          <img src="assets/img/logo.JPEG" alt="logo" style="height:70px;margin-bottom:20px;">
+
+          <h1>Instalación de cielo americano profesional</h1>
+
+          <p>
+            Realizamos instalación, reparación y mantención de cielo americano para
+            oficinas, locales comerciales, negocios y hogares. Trabajo limpio,
+            rápido y con terminaciones profesionales.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/56958305732?text=Hola%20JM%20Cielo%20Americano%2C%20quiero%20cotizar%20una%20instalaci%C3%B3n." target="_blank">
+              📲 Cotizar por WhatsApp
+            </a>
+
+            <a class="btn btn-dark" href="#trabajos">
+              Ver trabajos
+            </a>
+          </div>
+
+          <div class="hero-info">
+            <div class="hero-info-card">
+              <strong>Rápido</strong>
+              <span>Cotización directa</span>
+            </div>
+
+            <div class="hero-info-card">
+              <strong>Limpio</strong>
+              <span>Trabajo ordenado</span>
+            </div>
+
+            <div class="hero-info-card">
+              <strong>Seguro</strong>
+              <span>Instalación profesional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SERVICIOS
+         ========================= -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <h2 class="section-title">Servicios para tu proyecto</h2>
+        <p class="section-subtitle">
+          Soluciones prácticas para mejorar espacios interiores con cielo americano,
+          perfilería, planchas y accesorios de instalación.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">🏗️</div>
+            <h3>Instalación de cielo americano</h3>
+            <p>
+              Instalamos cielo americano en oficinas, locales, viviendas y espacios comerciales.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🧰</div>
+            <h3>Reparación y mantención</h3>
+            <p>
+              Reemplazo de planchas dañadas, ajuste de perfilería y mejoras de terminación.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💡</div>
+            <h3>Terminaciones e iluminación</h3>
+            <p>
+              Preparación para luminarias, detalles de borde y acabados más limpios.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         BLOQUE DESTACADO
+         ========================= -->
+    <section class="section highlight">
+      <div class="container highlight-layout">
+        <div>
+          <h2 class="section-title">Terminaciones limpias para espacios modernos</h2>
+          <p class="section-subtitle">
+            El cielo americano mejora la presentación del espacio, permite ocultar instalaciones
+            y facilita futuras mantenciones sin romper la estructura del lugar.
+          </p>
+
+          <div class="check-list">
+            <div class="check-item">
+              <span>✓</span>
+              <p>Ideal para oficinas, tiendas, consultas, locales y espacios interiores.</p>
+            </div>
+
+            <div class="check-item">
+              <span>✓</span>
+              <p>Instalación ordenada con perfilería y planchas según necesidad del proyecto.</p>
+            </div>
+
+            <div class="check-item">
+              <span>✓</span>
+              <p>Atención rápida en Santiago y coordinación directa por WhatsApp.</p>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/56958305732?text=Hola%20JM%20Cielo%20Americano%2C%20necesito%20informaci%C3%B3n%20sobre%20cielo%20americano." target="_blank">
+            Solicitar información
+          </a>
+        </div>
+
+        <div class="image-frame" aria-label="Trabajo de cielo americano"></div>
+      </div>
+    </section>
+
+    <!-- =========================
+         MATERIALES
+         ========================= -->
+    <section class="section" id="materiales">
+      <div class="container">
+        <h2 class="section-title">Materiales y soluciones</h2>
+        <p class="section-subtitle">
+          Trabajamos con los principales elementos necesarios para una instalación completa,
+          segura y con buena presentación.
+        </p>
+
+        <div class="materials-grid">
+          <article class="material-card" data-catalog="planchas">
+            <div class="material-img img-1"></div>
+            <div class="material-body">
+              <h3>Planchas de cielo</h3>
+              <p>Planchas para cielo americano según el tipo de espacio y terminación requerida.</p>
+              <a href="#" class="open-catalog-link" data-catalog="planchas">Ver modelos y precios →</a>
+            </div>
+          </article>
+
+          <article class="material-card" data-catalog="perfileria">
+            <div class="material-img img-2"></div>
+            <div class="material-body">
+              <h3>Perfilería</h3>
+              <p>Perfiles principales, secundarios y elementos para una estructura firme.</p>
+              <a href="#" class="open-catalog-link" data-catalog="perfileria">Ver modelos y precios →</a>
+            </div>
+          </article>
+
+          <article class="material-card" data-catalog="iluminacion">
+            <div class="material-img img-3"></div>
+            <div class="material-body">
+              <h3>Iluminación</h3>
+              <p>Preparación del cielo para luminarias y espacios más modernos.</p>
+              <a href="#" class="open-catalog-link" data-catalog="iluminacion">Ver modelos y precios →</a>
+            </div>
+          </article>
+
+          <article class="material-card" data-catalog="accesorios">
+            <div class="material-img img-4"></div>
+            <div class="material-body">
+              <h3>Accesorios</h3>
+              <p>Elementos complementarios para instalación, ajuste y terminación.</p>
+              <a href="#" class="open-catalog-link" data-catalog="accesorios">Ver modelos y precios →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         GALERÍA DE TRABAJOS
+         ========================= -->
+    <section class="section highlight" id="trabajos">
+      <div class="container">
+        <h2 class="section-title">Trabajos realizados</h2>
+        <p class="section-subtitle">
+          Aquí podrás mostrar fotos reales de instalaciones, reparaciones y terminaciones.
+          Cuando tengas las imágenes del cliente, solo reemplazamos los archivos de la carpeta assets/img.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-1 big">
+            <span>Instalación en oficina</span>
+          </div>
+
+          <div class="gallery-item gallery-2">
+            <span>Perfilería</span>
+          </div>
+
+          <div class="gallery-item gallery-3">
+            <span>Terminaciones</span>
+          </div>
+
+          <div class="gallery-item gallery-4">
+            <span>Local comercial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACTO FINAL
+         ========================= -->
+    <section class="section cta" id="contacto">
+      <div class="container">
+        <h2 class="section-title">¿Necesitas instalar cielo americano?</h2>
+        <p class="section-subtitle">
+          Escríbenos por WhatsApp, redes sociales o completa el formulario para preparar tu cotización en Santiago.
+        </p>
+
+        <a class="btn btn-primary" href="https://wa.me/56958305732?text=Hola%20JM%20Cielo%20Americano%2C%20quiero%20cotizar%20un%20trabajo%20en%20Santiago." target="_blank">
+          📲 Hablar por WhatsApp
+        </a>
+
+        <div class="contact-mini-bar">
+          <span>Instagram: <a href="https://www.instagram.com/cieloamericanojm" target="_blank">@cieloamericanojm</a></span>
+          <span>Correo: <a href="mailto:ventascieloamericanojm@gmail.com">ventascieloamericanojm@gmail.com</a></span>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-box">
+            <h3>Contacto directo</h3>
+            <p>
+              También puedes comunicarte por redes sociales o correo electrónico.
+              Cambia estos enlaces cuando tengas las cuentas oficiales definitivas.
+            </p>
+
+            <div class="social-buttons">
+              <a class="social-btn" href="https://wa.me/56958305732?text=Hola%20JM%20Cielo%20Americano%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank">
+                <span>WhatsApp</span>
+                <strong>+56 9 5830 5732</strong>
+              </a>
+
+              <a class="social-btn" href="https://www.instagram.com/cieloamericanojm" target="_blank">
+                <span>Instagram</span>
+                <strong>@cieloamericanojm</strong>
+              </a>
+
+              <a class="social-btn" href="https://www.facebook.com/" target="_blank">
+                <span>Facebook</span>
+                <strong>JM Cielo Americano</strong>
+              </a>
+
+              <a class="social-btn" href="mailto:ventascieloamericanojm@gmail.com">
+                <span>Correo</span>
+                <strong>ventascieloamericanojm@gmail.com</strong>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <h3>Enviar solicitud por correo</h3>
+            <p>
+              Completa los datos y se abrirá el correo del visitante con el mensaje listo para enviar.
+            </p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +56 9 0000 0000" required>
+              </div>
+
+              <div class="form-group full">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" placeholder="tu@email.com">
+              </div>
+
+              <div class="form-group full">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas instalar, reparar o cotizar..." required></textarea>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+              ✉️ Enviar solicitud
+            </button>
+
+            <p class="form-note">
+              Nota: en esta versión sin backend, el formulario usa el correo del visitante para enviar el mensaje.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- =========================
+       MODAL CATÁLOGO DE MATERIALES
+       ========================= -->
+  <div class="catalog-modal" id="catalogModal" aria-hidden="true">
+    <div class="catalog-panel" role="dialog" aria-modal="true" aria-labelledby="catalogTitle">
+      <div class="catalog-header">
+        <div>
+          <h3 id="catalogTitle">Catálogo</h3>
+          <p id="catalogDescription">Modelos referenciales con precios aproximados.</p>
+        </div>
+
+        <button class="catalog-close" type="button" id="catalogClose" aria-label="Cerrar catálogo">
+          ×
+        </button>
+      </div>
+
+      <div class="catalog-body">
+        <div class="catalog-grid" id="catalogGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>JM Cielo Americano</strong> · Instalación profesional en Santiago de Chile</p>
+      <p>Contacto por WhatsApp: +56 9 5830 5732</p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a class="whatsapp-float" href="https://wa.me/56958305732?text=Hola%20JM%20Cielo%20Americano%2C%20quiero%20cotizar%20una%20instalaci%C3%B3n." target="_blank" aria-label="Contactar por WhatsApp">
+    ☎
+  </a>
+
+
+
+  <!-- =========================
+       CATÁLOGO INTERACTIVO DE MATERIALES
+       ========================= -->
+  <script>
+    /*
+      Catálogo simple sin carrito.
+      Cada tarjeta de "Materiales y soluciones" abre una galería con productos,
+      precios aproximados y botón directo a WhatsApp.
+
+      Más adelante solo se cambian:
+      - imágenes
+      - nombres
+      - precios
+      - descripciones
+    */
+
+    const catalogData = {
+      planchas: {
+        title: "Planchas de cielo americano",
+        description: "Modelos referenciales de planchas para cielo americano. Precios aproximados sujetos a confirmación.",
+        products: [
+          {
+            name: "Plancha fibra mineral blanca",
+            price: "Desde $3.990 c/u",
+            description: "Formato estándar para oficinas, locales y espacios interiores.",
+            image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Plancha acústica decorativa",
+            price: "Desde $5.500 c/u",
+            description: "Mejor presentación y apoyo acústico para espacios comerciales.",
+            image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Plancha resistente a humedad",
+            price: "Desde $6.200 c/u",
+            description: "Recomendada para zonas donde se requiere mayor resistencia.",
+            image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Plancha PVC blanca",
+            price: "Desde $4.900 c/u",
+            description: "Alternativa liviana, limpia y fácil de mantener.",
+            image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Plancha terminación fina",
+            price: "Consultar",
+            description: "Opción para proyectos que buscan una terminación más elegante.",
+            image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+          }
+        ]
+      },
+
+      perfileria: {
+        title: "Perfilería para cielo americano",
+        description: "Perfiles principales, secundarios y elementos de soporte para instalación.",
+        products: [
+          {
+            name: "Perfil principal 3.66 m",
+            price: "Desde $2.990 c/u",
+            description: "Perfil base para la estructura principal del cielo americano.",
+            image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Perfil secundario 1.22 m",
+            price: "Desde $1.490 c/u",
+            description: "Perfil secundario para distribución y soporte de planchas.",
+            image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Perfil secundario 0.61 m",
+            price: "Desde $990 c/u",
+            description: "Complemento para modulación de cielo americano.",
+            image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Ángulo perimetral",
+            price: "Desde $1.990 c/u",
+            description: "Terminación perimetral para bordes y encuentros con muro.",
+            image: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Sistema de suspensión",
+            price: "Desde $8.990 kit",
+            description: "Alambres, fijaciones y accesorios para suspensión segura.",
+            image: "https://images.unsplash.com/photo-1581092588425-4c1d1b2c9f5c?auto=format&fit=crop&w=900&q=80"
+          }
+        ]
+      },
+
+      iluminacion: {
+        title: "Iluminación para cielo americano",
+        description: "Opciones referenciales para complementar la instalación con luminarias.",
+        products: [
+          {
+            name: "Panel LED 60x60",
+            price: "Desde $12.990 c/u",
+            description: "Luminaria LED ideal para oficinas y locales comerciales.",
+            image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Panel LED sobrepuesto",
+            price: "Desde $14.990 c/u",
+            description: "Opción práctica cuando se requiere instalación visible.",
+            image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Foco empotrado LED",
+            price: "Desde $4.990 c/u",
+            description: "Para puntos de luz decorativos o zonas específicas.",
+            image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Instalación de luminaria",
+            price: "Desde $9.990",
+            description: "Instalación referencial según condiciones del espacio.",
+            image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+          }
+        ]
+      },
+
+      accesorios: {
+        title: "Accesorios y complementos",
+        description: "Elementos complementarios para una instalación limpia, firme y segura.",
+        products: [
+          {
+            name: "Alambre de suspensión",
+            price: "Desde $4.990 rollo",
+            description: "Elemento de soporte para suspensión de la estructura.",
+            image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Tarugos y fijaciones",
+            price: "Desde $2.990 pack",
+            description: "Fijaciones para instalación según tipo de superficie.",
+            image: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Uniones y conectores",
+            price: "Desde $1.990 pack",
+            description: "Complementos para armado y ajuste de perfilería.",
+            image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=80"
+          },
+          {
+            name: "Kit básico de instalación",
+            price: "Desde $19.990",
+            description: "Pack referencial con accesorios básicos para instalación.",
+            image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80"
+          }
+        ]
+      }
+    };
+
+    const catalogModal = document.getElementById("catalogModal");
+    const catalogTitle = document.getElementById("catalogTitle");
+    const catalogDescription = document.getElementById("catalogDescription");
+    const catalogGrid = document.getElementById("catalogGrid");
+    const catalogClose = document.getElementById("catalogClose");
+
+    function openCatalog(category) {
+      const data = catalogData[category];
+
+      if (!data || !catalogModal || !catalogTitle || !catalogGrid) {
+        return;
+      }
+
+      catalogTitle.textContent = data.title;
+      catalogDescription.textContent = data.description;
+
+      catalogGrid.innerHTML = data.products.map((product) => {
+        const whatsappText = encodeURIComponent(
+          `Hola JM Cielo Americano, quiero consultar por: ${product.name} (${product.price}).`
+        );
+
+        return `
+          <article class="catalog-product">
+            <div class="catalog-product-img" style="background-image:url('${product.image}')"></div>
+            <div class="catalog-product-body">
+              <h4>${product.name}</h4>
+              <p>${product.description}</p>
+              <div class="catalog-price">${product.price}</div>
+              <a class="btn btn-primary" href="https://wa.me/56958305732?text=${whatsappText}" target="_blank">
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      catalogModal.classList.add("active");
+      catalogModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeCatalog() {
+      if (!catalogModal) return;
+
+      catalogModal.classList.remove("active");
+      catalogModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll("[data-catalog]").forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        openCatalog(this.dataset.catalog);
+      });
+    });
+
+    if (catalogClose) {
+      catalogClose.addEventListener("click", closeCatalog);
+    }
+
+    if (catalogModal) {
+      catalogModal.addEventListener("click", function (event) {
+        if (event.target === catalogModal) {
+          closeCatalog();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeCatalog();
+      }
+    });
+  </script>
+
+  <!-- =========================
+       FORMULARIO DE CONTACTO
+       ========================= -->
+  <script>
+    /*
+      Este formulario funciona sin backend usando mailto.
+      Cuando el usuario presiona "Enviar solicitud", se abre su aplicación de correo
+      con el destinatario, asunto y mensaje ya preparados.
+
+      Si más adelante quieres que el correo se envíe automáticamente desde la web,
+      se puede integrar con un servicio como Formspree, EmailJS o con un backend propio.
+    */
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        const destinatario = "ventascieloamericanojm@gmail.com";
+        const asunto = "Nueva solicitud desde la web - JM Cielo Americano";
+
+        const cuerpo = `Hola JM Cielo Americano,%0D%0A%0D%0A` +
+          `Quiero solicitar información o cotización.%0D%0A%0D%0A` +
+          `Nombre: ${encodeURIComponent(nombre)}%0D%0A` +
+          `Teléfono: ${encodeURIComponent(telefono)}%0D%0A` +
+          `Correo: ${encodeURIComponent(correo || "No indicado")}%0D%0A%0D%0A` +
+          `Mensaje:%0D%0A${encodeURIComponent(mensaje)}%0D%0A%0D%0A` +
+          `Enviado desde la página web.`;
+
+        window.location.href = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+      });
+    }
+  </script>
+
+</body>
+</html>
+
